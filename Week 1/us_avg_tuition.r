@@ -3,7 +3,6 @@ library(geofacet)
 library(stringr)
 library(scales)
 
-setwd('c:/Users/LokHeng/Desktop/Rstuff/US_avg_tuition/')
 df <- read.csv('us_avg_tuition.csv', stringsAsFactors = FALSE)
 
 #Remove 2004-05
