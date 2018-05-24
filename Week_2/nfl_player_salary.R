@@ -7,7 +7,8 @@ fb_salary <- read.csv('tidy_tuesday_week2.csv')
 fb_salary <- gather(fb_salary, key = 'position', value = 'salary', 2:11) %>%
   filter(year %in% c(2011, 2018))
 
-fb_salary <- fb_salary[complete.cases(fb_salary),]
+fb_salary <- fb_salary[complete.cases(fb_salary), ]
+fb_salary$position <- str_replace(fb_salary$position, '\\.', ' ')
 fb_salary$position <- as.factor(fb_salary$position)
 fb_salary$year <- as.factor(fb_salary$year)
 
